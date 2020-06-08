@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="login">
+    <form onsubmit="return validate()" action="page.html">
+        <h1 class="title">User-Login</h1>
+        <div class="form">
+            <input id="uname" placeholder='UserName' type='text' ><br>
+            <br>
+            <input id="pwd" placeholder='Password' type='password' ><br>
+            <br>
+            <div class="btn">
+                <button type='submit' onclick="refresh()">Login</button>
+            </div>
+        </div>
+    </body>
+    <script src="login.js"></script>
+</form>
+</html>
