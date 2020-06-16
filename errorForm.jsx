@@ -16,7 +16,7 @@ class ErrorForm extends Component {
     let err = "";
     if (nam === "password") {
       if ((val != "") & (val.length < 6)) {
-        err = <strong>Password is too short!</strong>;
+        err = <strong style={{color:'red'}}>Password is too short!</strong>;
         // err = alert('password is too short!');
       }
     }
