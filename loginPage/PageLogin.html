@@ -1,0 +1,56 @@
+import React, { Component } from "react";
+import "./PageLogin.css";
+
+class LPage extends Component {
+  render() {
+    return (
+      <form>
+        <div className="row">
+          <div class="col-sm-4">
+            <h1>WELCOME! {this.props.sai}</h1>
+            <h3>Enter your Id and Password</h3>
+          </div>
+          <div class="col-sm-8 col-xs-4">
+            <h3 className="signin">SIGN IN</h3>
+            <div className="input1">
+              <input
+                type="text"
+                style={{
+                  borderRadius: "30px",
+                  border: "none",
+                  backgroundColor: "white",
+                }}
+              />
+            </div>
+            <div className="input2">
+              <input
+                type="text"
+                style={{
+                  borderRadius: "30px",
+                  border: "none",
+                  backgroundColor: "white",
+                }}
+              />
+            </div>
+            <div className="button">
+              <input
+                type="button"
+                value="Login"
+                style={{
+                  border: "none",
+                  backgroundColor: "blue",
+                  borderRadius: "30px",
+                  color: "white",
+                  width: "225px",
+                  fontSize: '18px'
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    );
+  }
+}
+
+export default LPage;
