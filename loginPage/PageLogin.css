@@ -1,34 +1,60 @@
-.row {
+.main_page {
+  background-color: lavender;
+  padding-bottom: 295px;
+}
+
+.header_block {
+  padding-left: 100px;
   padding-top: 200px;
-  padding-bottom: 150px;
-  padding-left: 200px;
-  padding-right: 200px;
 }
 
-.col-sm-4 {
-  font-size: 20px;
-}
-
-.col-sm-8 {
-  padding-top: 50px;
-  font-size: 20px;
+.login_block {
+  padding-top: 180px;
   padding-left: 300px;
 }
 
 .signin {
-  padding-left: 60px;
+  padding-left: 80px;
 }
 
-.input1 {
+.input_tag {
   padding-top: 10px;
+  padding-bottom: 5px;
 }
 
-.input2 {
-  padding-top: 10px;
+.input_tag1 {
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  width: 250px;
+  height: 35px;
+  box-shadow: 2px 4px 8px 3px rgb(179, 175, 175);
+}
+
+.input_tag2 {
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  width: 250px;
+  height: 35px;
+  box-shadow: 2px 4px 8px 3px rgb(179, 175, 175);
 }
 
 .button {
   padding-top: 10px;
-  padding-left: 2px;
-  opacity: 65%;
+}
+
+input_tag:focus {
+  border: none;
+  outline: none;
+}
+
+.button_tag {
+  border: none;
+  text-align: center;
+  width: 250px;
+  height: 30px;
+  border-radius: 30px;
+  padding-top: 5px;
+  padding-bottom: 30px;
 }
