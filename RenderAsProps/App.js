@@ -8,7 +8,7 @@ import Counter from "./RenderAsProps/Counter";
 function App() {
   return (
     <div className="App">
-      <User />
+      <User render="Welcome" name={(isLoggedIn) => isLoggedIn ? "js" : "Guest"} />
       <Counter
         render={(count, incrementCount) => (
           <ClickCounter count={count} incrementCount={incrementCount} />
