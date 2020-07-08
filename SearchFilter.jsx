@@ -16,33 +16,39 @@ class SearchFilter extends Component {
         { id: 9, name: "DragonFruits" },
         { id: 10, name: "Jackfruits" },
       ],
-      filteredFruits: "",
+      search: "",
     };
   }
 
   onChangeHandler = (e) => {
-    this.setState({ filteredFruits: e.target.value });
-    // console.log("input", e.target.value);
-    console.log(this.state.filteredFruits);
+    this.setState({ search: e.target.value });
+    //console.log(input,e.target.value);
   };
 
   render() {
+     let filteredFruits = this.state.fruits.filter((fruit) => {
+      return (
+        fruit.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
+      );
+    });
     return (
       <div className="container">
         <h1>Search Filter</h1>
         <div>
           <input
             type="text"
-            value={this.state.filteredFruits}
+            value={this.state.search}
             onChange={this.onChangeHandler}
-            pattern={"[A-Za-z]"}
           />
-          {this.state.fruits
-            .filter((e) => e.name.includes("Apples"))
+          {filteredFruits
+            // .filter((e) => e.name.includes("G"))
             .map((fruit) => {
               return (
                 <ul className="list-group" key={fruit.id}>
-                  <ol className="list-group-item" key={fruit.id}>
+                  <ol
+                    className="list-group-item"
+                    key={fruit.id}
+                  >
                     {fruit.name}
                   </ol>
                 </ul>
