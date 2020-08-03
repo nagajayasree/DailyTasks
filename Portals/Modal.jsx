@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-const node = document.getElementById("domNode");
+const modalRoot = document.getElementById("modal-root");
 
 class Modal extends Component {
   constructor(props) {
