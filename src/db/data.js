@@ -11,3 +11,5 @@ router.get("/users", function (req, res, next) {
     res.json(users);
   });
 });
+
+module.exports = router;

@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [users, setUsers] = useState();
+  useEffect(() => {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+      if (request.readyState === 4 && request.status === 200) {
+        const response = JSON.parse(request.response);
+        setUsers(response);
+      }
+    };
+    request.open("GET", "http://localhost:5000/users", true);
+    request.send();
+  }, []);
+  useEffect(() => {
+    console.log(users);
+  }, [users]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {users && users.map((user) => <p>{user.name}</p>)}
     </div>
   );
 }
